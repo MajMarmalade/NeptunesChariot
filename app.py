@@ -12,7 +12,7 @@ screen_center = screen.get_rect().center
 
 
 text_surface = bodyfont.render('Hello, World!', True, (255, 255, 255)) # White text
-Base_DOD_Logo  = pygame.image.load('Assets\DOD_Logo.PNG').convert_alpha()
+Base_DOD_Logo  = pygame.image.load('Assets/DOD_Logo.PNG').convert_alpha()
 Large_DOD_Logo = pygame.transform.scale(Base_DOD_Logo, (240,240))
 XLarge_DOD_Logo = pygame.transform.scale(Base_DOD_Logo, (480,480))
 

@@ -6,7 +6,7 @@ pygame.init()
 
 bodyfont = pygame.font.Font('VT323-Regular.ttf', 30)
 
-screen = pygame.display.set_mode((800,480))
+screen = pygame.display.set_mode((800,480), pygame.FULLSCREEN) 
 screen_center = screen.get_rect().center
 
 

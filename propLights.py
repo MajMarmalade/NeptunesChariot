@@ -32,12 +32,12 @@ def raygun_NoPower():
   x=0
 
   while x < 15:
-    raygun[1,2] = (0,255, 255)
+    raygun[(1,2)] = (0,255, 255)
     time.sleep(0.05)
-    raygun[1,2] = (0,0,0)
-    raygun[3,4] = (0,255, 255)
+    raygun[(1,2)] = (0,0,0)
+    raygun[(3,4)] = (0,255, 255)
     time.sleep(0.05)
-    raygun[3,4] = (0,0,0)
+    raygun[(3,4)] = (0,0,0)
     #pixels1[x+5] = (255, 0, 100)
     #pixels1[x+10] = (0, 255, 0)
     x=x+1

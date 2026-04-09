@@ -31,19 +31,19 @@ def raygun_NoPower():
   
   x=0
 
-  while x < 15:
+  while x < 40:
+    raygun[0] = (0,255, 255)
     raygun[1] = (0,255, 255)
-    raygun[2] = (0,255, 255)
-    raygun[3] = (0,0,0)
-    raygun[4] = (0,0,0)
-    raygun.show()
-    time.sleep(0.05)
-    raygun[1] = (0,0,0)
     raygun[2] = (0,0,0)
-    raygun[3] = (0,255, 255)
-    raygun[4] = (0,255, 255)
+    raygun[3] = (0,0,0)
     raygun.show()
-    time.sleep(0.05)
+    time.sleep(0.1)
+    raygun[0] = (0,0,0)
+    raygun[1] = (0,0,0)
+    raygun[2] = (0,255, 255)
+    raygun[3] = (0,255, 255)
+    raygun.show()
+    time.sleep(0.1)
 
     #pixels1[x+5] = (255, 0, 100)
     #pixels1[x+10] = (0, 255, 0)

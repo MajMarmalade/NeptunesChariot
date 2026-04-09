@@ -370,7 +370,6 @@ def raygun_Power():
   x=0 #4th phase
 
   while x < 10:
-    pixelBrightness=.3
     raygun_Shoot()
 
     x= x+1

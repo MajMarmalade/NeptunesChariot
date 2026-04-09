@@ -3,9 +3,20 @@ import time
 import board
 import neopixel
 
+DATA = "D18"
+raygunPixels = 6
+shipPixels = 7
+cryopodPixels = 2
+ 
+
 #Initialise a strips variable, provide the GPIO Data Pin
 #utilised and the amount of LED Nodes on strip and brightness (0 to 1 value)
-pixels1 = neopixel.NeoPixel(board.D18, 55, brightness=1)
+#pixels1 = neopixel.NeoPixel(board.D18, 6, brightness=1)
+
+pixels1 = neopixel.NeoPixel(board.D18,raygunPixels, brightness=.3)
+raygun = neopixel.NeoPixel(board.D18,raygunPixels, brightness=.3)
+ship = neopixel.NeoPixel(board.D18,shipPixels, brightness=.3)
+cryopod = neopixel.NeoPixel(board.D18,shipPixels, brightness=.3)
 
 #Also create an arbitrary count variable
 x=0
@@ -13,15 +24,22 @@ x=0
 #Focusing on a particular strip, use the command Fill to make it all a single colour
 #based on decimal code R, G, B. Number can be anything from 255 - 0. Use an RGB Colour
 #Code Chart Website to quickly identify the desired fill colour.
-pixels1.fill((0, 220, 0))
+
+#RAYGUN PROP PIXEL FUNCTIONS 
+
+
+
+raygun.fill((0, 255, 255))
 
 #Below demonstrates how to individual address a colour to a LED Node, in this case
 #LED Node 10 and colour Blue was selected
-pixels1[10] = (0, 20, 255)
+#pixels1[10] = (0, 20, 255)
 
 #Sleep for three seconds, You should now have all LEDs showing light with the first node
 #Showing a different colour
-time.sleep(4)
+time.sleep(10)
+
+raygun.fill((0, 0, 0))
 
 #Little Light slider script, will produce a nice loading bar effect that goes all the way up a small Strip 
 #and then all the way back

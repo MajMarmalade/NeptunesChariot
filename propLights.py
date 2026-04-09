@@ -28,10 +28,56 @@ x=0
 
 #Color Fades
 
+sideA = [0, 2, 4]
+sideB = [1, 3, 5]
+
+def raygun_ShootVibe():
+    dark = (50, 0, 50)
+    light = (200, 0, 200)
+
+    steps = 50  # smoothness of fade
+
+    # Move the pulse along the 3 positions
+    for pos in range(3):  # 0→1→2
+        for i in range(steps):
+            # interpolation factor 0→1
+            t = i / steps
+
+            # compute fade color
+            r = int(dark[0] + (light[0] - dark[0]) * t)
+            g = 0
+            b = int(dark[2] + (light[2] - dark[2]) * t)
+            color = (r, g, b)
+
+            # reset all pixels to dark
+            raygun.fill(dark)
+
+            # brighten the current pair
+            raygun[sideA[pos]] = color
+            raygun[sideB[pos]] = color
+
+            raygun.show()
+            time.sleep(0.01)
+
+        # fade back down
+        for i in range(steps):
+            t = i / steps
+            r = int(light[0] - (light[0] - dark[0]) * t)
+            b = int(light[2] - (light[2] - dark[2]) * t)
+            color = (r, 0, b)
+
+            raygun.fill(dark)
+            raygun[sideA[pos]] = color
+            raygun[sideB[pos]] = color
+
+            raygun.show()
+            time.sleep(0.01)
+
 def raygun_Shoot():
     dark = (50, 0, 50)
     light = (200, 0, 200)
     
+
     # Fade to light
     for i in range(100):
         # Linearly interpolate between dark and light
@@ -208,7 +254,10 @@ def raygun_NoPower():
 
     x=x+1 
 
-def raygun_Power():
+  raygun.fill((0,0,0))
+  raygun.show()
+
+def raygun_Power(): 
   
   x=0
 
@@ -332,6 +381,19 @@ def raygun_Power():
   while x < 2:
     pixelBrightness=.3
     raygun_Shoot()
+
+    x= x+1
+
+  while x < 2:
+    pixelBrightness=.3
+    raygun_ShootVibe
+
+    x= x+1
+
+  raygun.fill((0,0,0))
+  raygun.show()
+
+  
 
 
 

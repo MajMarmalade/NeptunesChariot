@@ -57,7 +57,7 @@ def raygun_ShootVibe():
             raygun[sideB[pos]] = color
 
             raygun.show()
-            time.sleep(0.01)
+            time.sleep(0.001)
 
         # fade back down
         for i in range(steps):
@@ -71,7 +71,7 @@ def raygun_ShootVibe():
             raygun[sideB[pos]] = color
 
             raygun.show()
-            time.sleep(0.01)
+            time.sleep(0.001)
 
 def raygun_Shoot():
     dark = (50, 0, 50)
@@ -386,7 +386,7 @@ def raygun_Power():
 
   x=0 #4th phase
 
-  while x < 2:
+  while x < 10:
     pixelBrightness=.3
     raygun_ShootVibe()
 

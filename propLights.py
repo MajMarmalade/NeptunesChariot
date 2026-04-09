@@ -43,7 +43,7 @@ def raygun_NoPower():
     x=x+1
     #time.sleep(0.05)
 
-raygun_NoPower
+raygun_NoPower()
 
 raygun.fill((0, 255, 255))
 

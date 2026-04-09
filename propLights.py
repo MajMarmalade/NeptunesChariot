@@ -143,6 +143,35 @@ def raygun_NoPower():
 
     x=x+1  
 
+  raygun.fill((255, 255, 255))
+  raygun.show()
+
+  pixelBrightness=.3
+  while pixelBrightness >= 0:
+    raygun.fill((255, 255, 255))
+
+    raygun.brightness=pixelBrightness
+    pixelBrightness -= .001
+    raygun.show()
+    time.sleep(.001)
+
+    raygun.fill((255, 255, 255))
+  raygun.show()
+
+  while x < 5:
+    raygun.fill((255, 0, 0))
+    raygun.show()
+    
+    pixelBrightness=.3
+    while pixelBrightness >= 0:
+      raygun.fill((255, 0, 0))
+
+      raygun.brightness=pixelBrightness
+      pixelBrightness -= .001
+      raygun.show()
+      time.sleep(.001)  
+
+  x=x+1 
 
 
 raygun_NoPower()

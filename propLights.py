@@ -62,6 +62,88 @@ def raygun_NoPower():
 
     x=x+1
 
+  x=0 #second phase
+
+  while x < 5:
+    while pixelBrightness <= .3:
+      raygun[0] = (0,255, 255)
+      raygun[1] = (0,255, 255)
+      raygun[2] = (0,0,0)
+      raygun[3] = (0,0,0)
+      raygun.brightness=pixelBrightness
+      pixelBrightness += .025
+      raygun.show()
+      time.sleep(.005)
+    
+    time.sleep(.005)
+    pixelBrightness=.05
+
+    while pixelBrightness <= .3:
+      raygun[0] = (0,0,0)
+      raygun[1] = (0,0,0)
+      raygun[2] = (0,255, 255)
+      raygun[3] = (0,255, 255)
+      raygun.brightness=pixelBrightness
+      pixelBrightness += .025
+      raygun.show()
+      time.sleep(.005)
+
+    time.sleep(.005)
+    pixelBrightness=.05
+
+    x=x+1  
+
+  x=0 #third phase
+
+  while x < 5:
+    while pixelBrightness <= .3:
+      raygun[0] = (0,255, 255)
+      raygun[1] = (0,255, 255)
+      raygun[2] = (0,0,0)
+      raygun[3] = (0,0,0)
+      raygun[4] = (0,0,0)
+      raygun[5] = (0,0,0)
+      raygun.brightness=pixelBrightness
+      pixelBrightness += .025
+      raygun.show()
+      time.sleep(.005)
+    
+    time.sleep(.005)
+    pixelBrightness=.05
+
+    while pixelBrightness <= .3:
+      raygun[0] = (0,0,0)
+      raygun[1] = (0,0,0)
+      raygun[2] = (0,255, 255)
+      raygun[3] = (0,255, 255)
+      raygun[4] = (0,0,0)
+      raygun[5] = (0,0,0)
+      raygun.brightness=pixelBrightness
+      pixelBrightness += .025
+      raygun.show()
+      time.sleep(.005)
+
+    time.sleep(.005)
+    pixelBrightness=.05
+
+    while pixelBrightness <= .3:
+      raygun[0] = (0,0,0)
+      raygun[1] = (0,0,0)
+      raygun[2] = (0,0,0)
+      raygun[3] = (0,0,0)
+      raygun[4] = (0,255, 255)
+      raygun[5] = (0,255, 255)
+      raygun.brightness=pixelBrightness
+      pixelBrightness += .025
+      raygun.show()
+      time.sleep(.005)
+
+    time.sleep(.005)
+    pixelBrightness=.05
+
+    x=x+1  
+
+
 
 raygun_NoPower()
 

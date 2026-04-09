@@ -27,7 +27,23 @@ x=0
 
 #RAYGUN PROP PIXEL FUNCTIONS 
 
+def raygun_NoPower():
+  
+  x=0
 
+  while x < 15:
+    raygun[1,2] = (0,255, 255)
+    time.sleep(0.05)
+    raygun[1,2] = (0,0,0)
+    raygun[3,4] = (0,255, 255)
+    time.sleep(0.05)
+    raygun[3,4] = (0,0,0)
+    #pixels1[x+5] = (255, 0, 100)
+    #pixels1[x+10] = (0, 255, 0)
+    x=x+1
+    #time.sleep(0.05)
+
+raygun_NoPower
 
 raygun.fill((0, 255, 255))
 
@@ -47,26 +63,26 @@ raygun.fill((0, 0, 0))
 #which LED Node we will target/index with a different colour
 
 #Below will loop until variable x has a value of 35
-while x<35:
+#while x<35:
     
-    pixels1[x] = (255, 0, 0)
-    pixels1[x-5] = (255, 0, 100)
-    pixels1[x-10] = (0, 0, 255)
+    #pixels1[x] = (255, 0, 0)
+    #pixels1[x-5] = (255, 0, 100)
+    #pixels1[x-10] = (0, 0, 255)
     #Add 1 to the counter
-    x=x+1
+    #x=x+1
     #Add a small time pause which will translate to 'smoothly' changing colour
-    time.sleep(0.05)
+    #time.sleep(0.05)
 
 #Below section is the same process as the above loop just in reverse
-while x>-15:
-    pixels1[x] = (255, 0, 0)
-    pixels1[x+5] = (255, 0, 100)
-    pixels1[x+10] = (0, 255, 0)
-    x=x-1
-    time.sleep(0.05)
+#while x>-15:
+    #pixels1[x] = (255, 0, 0)
+    #pixels1[x+5] = (255, 0, 100)
+    #pixels1[x+10] = (0, 255, 0)
+    #x=x-1
+    #time.sleep(0.05)
 
 #Add a brief time delay to appreciate what has happened    
 time.sleep(4)
 
 #Complete the script by returning all the LED to off
-pixels1.fill((0, 0, 0))
+raygun.fill((0, 0, 0))

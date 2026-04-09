@@ -178,17 +178,12 @@ def raygun_NoPower():
 
 raygun_NoPower()
 
-raygun.fill((0, 255, 255))
-
 #Below demonstrates how to individual address a colour to a LED Node, in this case
 #LED Node 10 and colour Blue was selected
 #pixels1[10] = (0, 20, 255)
 
 #Sleep for three seconds, You should now have all LEDs showing light with the first node
 #Showing a different colour
-time.sleep(3)
-
-raygun.fill((0, 0, 0))
 
 #Little Light slider script, will produce a nice loading bar effect that goes all the way up a small Strip 
 #and then all the way back
@@ -215,7 +210,7 @@ raygun.fill((0, 0, 0))
     #time.sleep(0.05)
 
 #Add a brief time delay to appreciate what has happened    
-time.sleep(4)
+
 
 #Complete the script by returning all the LED to off
 raygun.fill((0, 0, 0))

@@ -380,7 +380,7 @@ def raygun_Power():
 
   while x < 2:
     pixelBrightness=.3
-    raygun_Shoot()
+    #raygun_Shoot()
 
     x= x+1
 
@@ -399,7 +399,7 @@ def raygun_Power():
 
 
 
-raygun_NoPower()
+#raygun_NoPower()
 raygun_Power()
 
 #Below demonstrates how to individual address a colour to a LED Node, in this case

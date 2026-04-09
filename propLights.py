@@ -386,7 +386,7 @@ def raygun_Power():
 
   while x < 2:
     pixelBrightness=.3
-    raygun_ShootVibe
+    raygun_ShootVibe()
 
     x= x+1
 

@@ -35,7 +35,7 @@ def raygun_ShootVibe():
     dark = (50, 0, 50)
     light = (200, 0, 200)
 
-    steps = 50  # smoothness of fade
+    steps = 10  # smoothness of fade
 
     # Move the pulse along the 3 positions
     for pos in range(3):  # 0→1→2

@@ -146,17 +146,25 @@ def raygun_NoPower():
   raygun.fill((255, 255, 255))
   raygun.show()
 
-  pixelBrightness=1
-  while pixelBrightness >= 0:
-    raygun.fill((255, 255, 255))
+  pixelBrightness=.3
+  while x < 2:
+    while pixelBrightness >= 0:
+      raygun.fill((255, 255, 255))
 
-    raygun.brightness=pixelBrightness
-    pixelBrightness -= .001
+      raygun.brightness=pixelBrightness
+      pixelBrightness -= .1
+      raygun.show()
+      time.sleep(.001)
+
+      raygun.fill((255, 255, 255))
+      raygun.show()
+
+    raygun.fill((0, 0, 0))
     raygun.show()
-    time.sleep(.001)
 
-    raygun.fill((255, 255, 255))
-  raygun.show()
+    time.sleep(.1)
+
+    x=x+1
 
   x=0 #final phase
 

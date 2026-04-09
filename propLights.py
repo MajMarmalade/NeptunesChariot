@@ -384,6 +384,8 @@ def raygun_Power():
 
     x= x+1
 
+  x=0 #4th phase
+
   while x < 2:
     pixelBrightness=.3
     raygun_ShootVibe()

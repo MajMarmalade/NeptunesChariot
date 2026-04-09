@@ -60,7 +60,7 @@ raygun.fill((0, 255, 255))
 
 #Sleep for three seconds, You should now have all LEDs showing light with the first node
 #Showing a different colour
-time.sleep(10)
+time.sleep(3)
 
 raygun.fill((0, 0, 0))
 

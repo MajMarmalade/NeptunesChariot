@@ -25,6 +25,29 @@ x=0
 #based on decimal code R, G, B. Number can be anything from 255 - 0. Use an RGB Colour
 #Code Chart Website to quickly identify the desired fill colour.
 
+
+#Color Fades
+
+def raygun_Shoot():
+    dark = (50, 0, 50)
+    light = (200, 0, 200)
+    
+    # Fade to light
+    for i in range(100):
+        # Linearly interpolate between dark and light
+        # (Simplified example)
+        raygun.fill((int(50 + (i*1.5)), 0, int(50 + (i*1.5))))
+        raygun.show()
+        time.sleep(0.02)
+        
+    # Fade to dark
+    for i in range(100):
+        raygun.fill((int(200 - (i*1.5)), 0, int(200 - (i*1.5))))
+        raygun.show()
+        time.sleep(0.02)
+
+
+
 #RAYGUN PROP PIXEL FUNCTIONS 
 
 def raygun_NoPower():
@@ -185,8 +208,135 @@ def raygun_NoPower():
 
     x=x+1 
 
+def raygun_Power():
+  
+  x=0
+
+  pixelBrightness=0
+
+  while x < 5:
+    while pixelBrightness <= .3:
+      raygun[0] = (0,255, 255)
+      raygun[1] = (0,255, 255)
+      raygun[2] = (0,0,0)
+      raygun[3] = (0,0,0)
+      raygun.brightness=pixelBrightness
+      pixelBrightness += .025
+      raygun.show()
+      time.sleep(.005)
+    
+    time.sleep(.01)
+    pixelBrightness=.05
+
+    while pixelBrightness <= .3:
+      raygun[0] = (0,0,0)
+      raygun[1] = (0,0,0)
+      raygun[2] = (0,255, 255)
+      raygun[3] = (0,255, 255)
+      raygun.brightness=pixelBrightness
+      pixelBrightness += .025
+      raygun.show()
+      time.sleep(.005)
+
+    time.sleep(.01)
+    pixelBrightness=.05
+
+    x=x+1
+
+  x=0 #second phase
+
+  while x < 5:
+    while pixelBrightness <= .3:
+      raygun[0] = (0,255, 255)
+      raygun[1] = (0,255, 255)
+      raygun[2] = (0,0,0)
+      raygun[3] = (0,0,0)
+      raygun.brightness=pixelBrightness
+      pixelBrightness += .025
+      raygun.show()
+      time.sleep(.005)
+    
+    time.sleep(.005)
+    pixelBrightness=.05
+
+    while pixelBrightness <= .3:
+      raygun[0] = (0,0,0)
+      raygun[1] = (0,0,0)
+      raygun[2] = (0,255, 255)
+      raygun[3] = (0,255, 255)
+      raygun.brightness=pixelBrightness
+      pixelBrightness += .025
+      raygun.show()
+      time.sleep(.005)
+
+    time.sleep(.005)
+    pixelBrightness=.05
+
+    x=x+1  
+
+  x=0 #third phase
+
+  while x < 5:
+    while pixelBrightness <= .3:
+      raygun[0] = (0,255, 255)
+      raygun[1] = (0,255, 255)
+      raygun[2] = (0,0,0)
+      raygun[3] = (0,0,0)
+      raygun[4] = (0,0,0)
+      raygun[5] = (0,0,0)
+      raygun.brightness=pixelBrightness
+      pixelBrightness += .05
+      raygun.show()
+      time.sleep(.005)
+    
+    time.sleep(.0005)
+    pixelBrightness=.05
+
+    while pixelBrightness <= .3:
+      raygun[0] = (0,0,0)
+      raygun[1] = (0,0,0)
+      raygun[2] = (0,255, 255)
+      raygun[3] = (0,255, 255)
+      raygun[4] = (0,0,0)
+      raygun[5] = (0,0,0)
+      raygun.brightness=pixelBrightness
+      pixelBrightness += .05
+      raygun.show()
+      time.sleep(.005)
+
+    time.sleep(.0005)
+    pixelBrightness=.05
+
+    while pixelBrightness <= .3:
+      raygun[0] = (0,0,0)
+      raygun[1] = (0,0,0)
+      raygun[2] = (0,0,0)
+      raygun[3] = (0,0,0)
+      raygun[4] = (0,255, 255)
+      raygun[5] = (0,255, 255)
+      raygun.brightness=pixelBrightness
+      pixelBrightness += .05
+      raygun.show()
+      time.sleep(.005)
+
+    time.sleep(.0005)
+    pixelBrightness=.05
+
+    x=x+1  
+
+  raygun.fill((255, 255, 255))
+  raygun.show()
+
+  x=0 #4th phase
+
+  while x < 2:
+    pixelBrightness=.3
+    raygun_Shoot()
+
+
 
 raygun_NoPower()
+raygun_Power()
 
 #Below demonstrates how to individual address a colour to a LED Node, in this case
 #LED Node 10 and colour Blue was selected

@@ -40,11 +40,11 @@ def raygun_NoPower():
       raygun[2] = (0,0,0)
       raygun[3] = (0,0,0)
       raygun.brightness=pixelBrightness
-      pixelBrightness += .01
+      pixelBrightness += .005
       raygun.show()
       time.sleep(.001)
     
-    time.sleep(.1)
+    time.sleep(.05)
     pixelBrightness=0
 
     while pixelBrightness <= .3:
@@ -53,11 +53,11 @@ def raygun_NoPower():
       raygun[2] = (0,255, 255)
       raygun[3] = (0,255, 255)
       raygun.brightness=pixelBrightness
-      pixelBrightness += .01
+      pixelBrightness += .005
       raygun.show()
       time.sleep(.001)
 
-    time.sleep(.1)
+    time.sleep(.05)
     pixelBrightness=0
 
     x=x+1

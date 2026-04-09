@@ -35,7 +35,7 @@ def raygun_Shoot():
     dark = (50, 0, 50)
     light = (200, 0, 200)
 
-    steps = 15  # smoothness of fade
+    steps = 25  # smoothness of fade
 
     # Move the pulse along the 3 positions
     for pos in range(3):  # 0→1→2

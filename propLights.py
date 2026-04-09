@@ -148,7 +148,7 @@ def raygun_NoPower():
 
   x=0 #4th phase
 
-  while x < 5:
+  while x < 3:
     pixelBrightness=.3
     while pixelBrightness >= 0:
       raygun.fill((255, 255, 255))
@@ -170,7 +170,7 @@ def raygun_NoPower():
 
   x=0 #final phase
 
-  while x < 2:
+  while x < 3:
     raygun.fill((255, 0, 0))
     raygun.show()
 

@@ -146,7 +146,7 @@ def raygun_NoPower():
   raygun.fill((255, 255, 255))
   raygun.show()
 
-  pixelBrightness=.3
+  pixelBrightness=1
   while pixelBrightness >= 0:
     raygun.fill((255, 255, 255))
 

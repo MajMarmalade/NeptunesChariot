@@ -365,6 +365,7 @@ def raygun_Power():
     raygun.show()
     time.sleep(.01)
 
+  pixelBrightness=.3
 
   x=0 #4th phase
 

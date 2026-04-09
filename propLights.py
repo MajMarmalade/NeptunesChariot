@@ -164,7 +164,7 @@ def raygun_NoPower():
     raygun.fill((0, 0, 0))
     raygun.show()
 
-    time.sleep(.5)
+    time.sleep(.1)
 
     x=x+1
 

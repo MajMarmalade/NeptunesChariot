@@ -398,11 +398,11 @@ def raygun_Power():
   
 
 
-while true: 
+while True: 
   raygun_NoPower()
   raygun_Power()
 
-  
+
 
 #Below demonstrates how to individual address a colour to a LED Node, in this case
 #LED Node 10 and colour Blue was selected
